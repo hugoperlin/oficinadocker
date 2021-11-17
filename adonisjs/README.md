@@ -11,14 +11,14 @@ docker run -it --name adonisapp -v $(pwd)/src:/app:Z -w /app --user $(id -u):$(i
 ```
 
 Explicação do comando:
- docker run -> utilizado para executar um container
- -it -> indica que queremos interagir com o container criado
- --name adonisapp -> nome do container
- -v $(pwd)/src:/app:Z -> mapeia o diretório src para a pasta /app do container. O :Z é necessário por conta das permissões do mapeamento
--w /app -> indica que a pasta de trabalho dentro do container é a /app
--u node -> executa os comandos como o usuário node dentro do container
-node:17 -> imagem base da qual será criado o container
-npm init adonis-ts-app@latest . -> comando utilizado para criar uma aplicação adonisjs
+ * **docker run**: utilizado para executar um container
+ * **-it**: indica que queremos interagir com o container criado
+ * **--name adonisapp**: nome do container
+ * **-v $(pwd)/src:/app:Z**: mapeia o diretório src para a pasta /app do container. O :Z é necessário por conta das permissões do mapeamento
+* **-w /app**: indica que a pasta de trabalho dentro do container é a /app
+* **--user $(id -u):$(id -g)**: executa os comandos como o usuário node dentro do container
+* **node:17**: imagem base da qual será criado o container
+* **npm init adonis-ts-app@latest .**: comando utilizado para criar uma aplicação adonisjs
 
 ### 3. Executar o comando para rodar o adonijs ###
 
@@ -27,15 +27,15 @@ docker run -it --name adonisapp -v $(pwd)/src:/app:Z -w /app -p 3333:3333 --user
 ```
 
 Explicação do comando:
- docker run -> utilizado para executar um container
- -it -> indica que queremos interagir com o container criado
- --name adonisapp -> nome do container
- -v $(pwd)/src:/app:Z -> mapeia o diretório src para a pasta /app do container. O :Z é necessário por conta das permissões do mapeamento
- -p 3333:3333 -> mapeia a porta 3333 do host para a porta 3333 do container
- -w /app -> indica que a pasta de trabalho dentro do container é a /app
--u node -> executa os comandos como o usuário node dentro do container
-node:17 -> imagem base da qual será criado o container
-node ace serve --watch -> comando para rodar a aplicação adonisjs
+ * **docker run**: utilizado para executar um container
+ * **-it**: indica que queremos interagir com o container criado
+ * **--name adonisapp**: nome do container
+ * **-v $(pwd)/src:/app:Z**: mapeia o diretório src para a pasta /app do container. O :Z é necessário por conta das permissões do mapeamento
+ * **-p 3333:3333**: mapeia a porta 3333 do host para a porta 3333 do container
+ * **-w /app**: indica que a pasta de trabalho dentro do container é a /app
+* **--user $(id -u):$(id -g)**: executa os comandos como o usuário atual dentro do container
+* **node:17**: imagem base da qual será criado o container
+* **node ace serve --watch**: comando para rodar a aplicação adonisjs
 
 
 ### 5. Acesse a aplicação no seu browser ###
