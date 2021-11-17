@@ -44,10 +44,15 @@ o mysql.
 Altere o arquivo *.env*:
 
 DB_CONNECTION=mysql
+
 DB_HOST=db
+
 DB_PORT=3306
+
 DB_DATABASE=app
+
 DB_USERNAME=user
+
 DB_PASSWORD=user12345
 
 ### 4. Crie uma rota para verificar o funcionamento ###
