@@ -1,0 +1,1 @@
+docker run --rm --name bd1 -p 3306:3306 -v $(pwd)/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=user12345 -e MYSQL_DATABASE=teste -e MYSQL_USER=user -e MYSQL_PASSWORD=user12345 mysql
